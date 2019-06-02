@@ -6,8 +6,8 @@
                 <img :src="item.imgUrl" class="item-img">
           
                 <div class="item-info">
-                    <p class="item-title">{{item.itemTitle}}</p>
-                    <p class="item-desc">{{item.itemDesc}}</p>
+                    <p class="item-title">{{item.title}}</p>
+                    <p class="item-desc">{{item.desc}}</p>
                     <button class="item-button">查看详情</button>
                 </div>
             </li>
@@ -17,35 +17,8 @@
 <script>
 export default {
     name:'HomeRecommend',
-    data(){
-        return {
-            recommendList:[{
-                id:'1001',
-                imgUrl:'http://img1.qunarzz.com/sight/p0/1409/05/dce6461a918adf226afd9f3119eb6b14.jpg_350x240_d76e3122.jpg',
-                itemTitle:'五虎岛',
-                itemDesc:'5A级著名景区，位于吉林省吉林市'
-            },{
-                id:'1002',
-                imgUrl:'http://img1.qunarzz.com/sight/p0/1702/98/98a890af4b2d7d89a3.img.jpg_200x200_dfc9cbbb.jpg',
-                itemTitle:'圣鑫世外桃源温泉谷',
-                itemDesc:'5A级著名景区，位于吉林省吉林市'
-            },{
-                id:'1003',
-                imgUrl:'http://img1.qunarzz.com/sight/p0/1602/9f/9fc20948e19c112b90.img.jpg_200x200_14efa636.jpg',
-                itemTitle:'吉林神农温泉度假村',
-                itemDesc:'5A级著名景区，位于吉林省吉林市'
-            },{
-                id:'1004',
-                imgUrl:'http://img1.qunarzz.com/sight/p65/201211/09/b7ac0fb597ff697a93835fbb.jpg_200x200_5f1b16a2.jpg',
-                itemTitle:'拉法山',
-                itemDesc:'5A级著名景区，位于吉林省吉林市'
-            },{
-                id:'1005',
-                imgUrl:'http://img1.qunarzz.com/sight/p0/201406/25/222944c4d364b3d6e9064465071a898e.jpg_200x200_53fe0c3c.jpg',
-                itemTitle:'五虎岛游乐园（水世界）',
-                itemDesc:'5A级著名景区，位于吉林省吉林市'
-            }]
-        }
+    props:{
+        recommendList:Array
     }
 }
 </script>

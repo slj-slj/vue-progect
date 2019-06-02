@@ -4,7 +4,7 @@
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img"><img :src="item.imgUrl" class="icon-imgcontent"></div>
-                    <p class="icon-desc">{{item.font}}</p>
+                    <p class="icon-desc">{{item.desc}}</p>
                 </div>
             </swiper-slide>
         </swiper>
@@ -13,81 +13,21 @@
 <script>
 export default {
   name:'HomeIcons',
+  props:{
+      iconsList:Array
+  },
   data:function(){
       
       return{
         swiperOption:{
             autoPlay:"false" 
-        },
-        List:[
-          {
-              id:'0001',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-              font:'景点门票'
-          },
-          {
-              id:'0002',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-              font:'一日游'
-          },
-          {
-              id:'0003',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-              font:'泡温泉'
-          },
-          {
-              id:'0004',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
-              font:'长白山'
-          },
-          {
-              id:'0005',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-              font:'景点门票'
-          },
-          {
-              id:'0006',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-              font:'一日游'
-          },
-          {
-              id:'0007',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-              font:'泡温泉'
-          },
-          {
-              id:'0008',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
-              font:'长白山'
-          },
-          {
-              id:'0009',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-              font:'景点门票'
-          },
-          {
-              id:'0010',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-              font:'一日游'
-          },
-          {
-              id:'0011',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-              font:'泡温泉'
-          },
-          {
-              id:'0012',
-              imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
-              font:'长白山'
-          }
-        ],
+        }
       }
-      
   },
   computed:{
       pages(){
           const pages = []
-          this.List.forEach((item,index)=>{
+          this.iconsList.forEach((item,index)=>{
               const page = Math.floor(index/8)
               if(!pages[page]){
                   pages[page] = []
