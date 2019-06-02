@@ -50,6 +50,7 @@ export default {
         float:left
         padding-bottom:25%
         position: relative
+        margin-top:.2rem
         height:0
         .icon-img
             position:absolute
