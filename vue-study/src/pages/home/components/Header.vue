@@ -5,13 +5,17 @@
         </div>
         <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/景点/游玩主题</div>
         <router-link to="/city">
-          <div class="header-right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#xe62b;</span></div>
+          <div class="header-right">{{this.city}}<span class="iconfont arrow-icon">&#xe62b;</span></div>
         </router-link>
     </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -39,7 +43,8 @@ export default {
       padding-left:.1rem
       overflow hidden
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding 0 .1rem
       text-align:center
       color #fff
       .arrow-icon
