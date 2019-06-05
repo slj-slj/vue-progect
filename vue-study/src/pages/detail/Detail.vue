@@ -7,6 +7,7 @@
         ></detail-banner>
         <detail-header></detail-header>
         <div class="content">
+            <detail-card></detail-card>
             <detail-list :list="List"></detail-list>
         </div>
     </div>
@@ -15,6 +16,7 @@
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
+import DetailCard from './components/Card'
 import axios from 'axios'
 
 export default {
@@ -22,7 +24,8 @@ export default {
     components: {
         DetailBanner,
         DetailHeader,
-        DetailList
+        DetailList,
+        DetailCard
     },
     data(){
         return{
@@ -60,7 +63,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
     .content
-        height 50rem
+        height 10rem
 </style>
 
 
