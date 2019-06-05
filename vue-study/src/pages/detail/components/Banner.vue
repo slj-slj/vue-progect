@@ -7,16 +7,20 @@
             <div class="banner-num"><span class="iconfont banner-icon">&#xe70b;</span>{{this.gallaryImgs.length}}</div>    
         </div> 
     </div> 
-    <common-gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="Close"></common-gallary>
+    <detail-animation>
+        <common-gallary :gallaryImgs="gallaryImgs" v-show="showGallary" @close="Close"></common-gallary>
+    </detail-animation>
 </div>
     
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import DetailAnimation from 'common/animation/animation'
 export default {
     name:'DetailBanner',
     components: {
-        CommonGallary
+        CommonGallary,
+        DetailAnimation
     },
     props:{
         sightName:String,
