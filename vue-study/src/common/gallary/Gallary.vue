@@ -2,7 +2,7 @@
     <div class="container" @click="handleGallaryClick">
         <div class="wrapper">
             <swiper :options="swiperOptions">
-                <swiper-slide v-for="(item,index) in imgs" :key="index">
+                <swiper-slide v-for="(item,index) in gallaryImgs" :key="index">
                     <img class="gallary-img" :src="item"/>
                 </swiper-slide>
                 <div class="swiper-pagination"  slot="pagination"></div>
@@ -24,7 +24,7 @@ export default {
         }
     },
     props: {
-        imgs:{
+        gallaryImgs:{
             type:Array,
             default(){
                 return []
@@ -54,9 +54,6 @@ export default {
         background-color #000
         .wrapper
             width 100%
-            height 0
-            padding-bottom 61.5%
-            // background-color red
             .gallary-img
                 width 100%
             .swiper-pagination
