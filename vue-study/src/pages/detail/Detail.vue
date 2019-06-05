@@ -56,14 +56,13 @@ export default {
                 this.List = data.categoryList
                 
             }
-            console.log(res.data)
         }
     }
 }
 </script>
 <style lang="stylus" scoped>
     .content
-        height 10rem
+        height 12rem
 </style>
 
 

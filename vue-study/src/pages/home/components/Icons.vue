@@ -44,7 +44,7 @@ export default {
     @import '~@/assets/style/mixins.styl'
     .icons >>> .swiper-container
         height:0
-        padding-bottom:50%
+        padding-bottom:55%
     .icon
         width:25%
         float:left
